@@ -16,7 +16,7 @@ if __name__ == '__main__':
                 yesterday = (now - timedelta(days=1)).strftime('%Y%m%d')
 
                 try:
-                    title = 'ΐΞΖν' + str(letter_cnt) + ' ' + today[4:]
+                    title = 'μΈνΈ' + str(letter_cnt) + ' ' + today[4:]
                     letter = ''
                     letter += send_press()
                     letter += send_sports_data(yesterday)

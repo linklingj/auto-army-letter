@@ -4,7 +4,7 @@ from summarize_text import summarize_article
 import re
 import requests
 
-#³×ÀÌ¹ö ´º½ºÀÇ Æ¯Á¤ ¾ğ·Ğ»ç¿¡¼­ Å©·Ñ¸µ
+#ë„¤ì´ë²„ ë‰´ìŠ¤ì˜ íŠ¹ì • ì–¸ë¡ ì‚¬ì—ì„œ í¬ë¡¤ë§
 def send_press():
     yesterday = datetime.today() - timedelta(days=1)
     base_address = 'https://media.naver.com/press/437/ranking?type=section&date=' + yesterday.strftime('%Y%m%d')

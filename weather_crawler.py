@@ -23,17 +23,17 @@ def send_weather_data(date):
             output += day.get_text().replace('\n','') + '\n'
 
             weather = days[i].find_all('span', {'class': 'weather_inner'})
-            am1 = '¿ÀÀü ' + weather[0].find('span', {'class': 'rainfall'}).get_text().replace('\n',' ').replace('°­¼öÈ®·ü','')
+            am1 = 'ì˜¤ì „ ' + weather[0].find('span', {'class': 'rainfall'}).get_text().replace('\n',' ').replace('ê°•ìˆ˜í™•ë¥ ','')
             am2 = weather[0].find('span', {'class': 'weather_text'}).get_text()
-            pm1 = '¿ÀÈÄ ' + weather[1].find('span', {'class': 'rainfall'}).get_text().replace('\n',' ').replace('°­¼öÈ®·ü','')
+            pm1 = 'ì˜¤í›„ ' + weather[1].find('span', {'class': 'rainfall'}).get_text().replace('\n',' ').replace('ê°•ìˆ˜í™•ë¥ ','')
             pm2 = weather[1].find('span', {'class': 'weather_text'}).get_text()
             output += am1 + ' ' + am2 + '|' + pm1 + ' ' + pm2 + '|'
 
-            output += days[i].find('strong' ,{'class', 'temperature'}).get_text().replace('\n', '').replace('ÃÖÀú±â¿Â',' ').replace('ÃÖ°í±â¿Â',' ') + '\n'
+            output += days[i].find('strong' ,{'class', 'temperature'}).get_text().replace('\n', '').replace('ìµœì €ê¸°ì˜¨',' ').replace('ìµœê³ ê¸°ì˜¨',' ') + '\n'
     except:
         pass
 
     return output + '\n'
 
 
-#Àå¾È±¸ Á¶¿ø2µ¿02111598
+#ì¥ì•ˆêµ¬ ì¡°ì›2ë™02111598

@@ -4,7 +4,7 @@ from summarize_text import summarize_article
 import re
 import requests
 
-#³×ÀÌ¹ö ´º½º¿¡¼­ Å©·Ñ¸µ
+#ë„¤ì´ë²„ ë‰´ìŠ¤ì—ì„œ í¬ë¡¤ë§
 def send_news():
     base_address = 'https://news.naver.com/main/list.naver?mode=LSD&mid=sec&sid1=10'
 
@@ -29,7 +29,7 @@ def send_news():
         except:
             pass
 
-    #0 Á¤Ä¡ 1 °æÁ¦ 2 »çÈ¸ 3 »ıÈ°/¹®È­ 4 ¼¼°è 5 IT/°úÇĞ
+    #0 ì •ì¹˜ 1 ê²½ì œ 2 ì‚¬íšŒ 3 ìƒí™œ/ë¬¸í™” 4 ì„¸ê³„ 5 IT/ê³¼í•™
     article_per_subject = {0 : 1, 1 : 1, 2 : 1, 4 : 1, 5 : 1}
     for i in [0, 1, 2, 4, 5]:
         max_cnt = article_per_subject[i]

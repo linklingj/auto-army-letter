@@ -2,7 +2,7 @@ import openai
 
 def summarize_article(article_text):
     openai.api_key = ''
-    basic_prompt = '¾ÕÀ¸·Î ¾µ ³»¿ëÀº ±â»çÀÇ ÀÏºÎ¸¦ °¡Á®¿Â°Å¾ß. ÀÌ ±â»ç¸¦ 3¹®ÀåÀ¸·Î ¿ä¾àÇØÁà. °ø¹éÆ÷ÇÔÇÏ¿© ÃÖ´ë 200ÀÚ¿©¾ßÇØ. ±×¸®°í ¾î·Á¿î ¿ë¾î´Â Áö¾çÇØÁà. ±â»ç:'
+    basic_prompt = 'ì•ìœ¼ë¡œ ì“¸ ë‚´ìš©ì€ ê¸°ì‚¬ì˜ ì¼ë¶€ë¥¼ ê°€ì ¸ì˜¨ê±°ì•¼. ì´ ê¸°ì‚¬ë¥¼ 3ë¬¸ì¥ìœ¼ë¡œ ìš”ì•½í•´ì¤˜. ê³µë°±í¬í•¨í•˜ì—¬ ìµœëŒ€ 200ìì—¬ì•¼í•´. ê·¸ë¦¬ê³  ì–´ë ¤ìš´ ìš©ì–´ëŠ” ì§€ì–‘í•´ì¤˜. ê¸°ì‚¬:'
     messages = []
 
     message = basic_prompt + article_text
@@ -11,4 +11,4 @@ def summarize_article(article_text):
 
     chat = openai.ChatCompletion.create(model = "gpt-3.5-turbo", messages=messages)
     reply = chat.choices[0].message.content
-    return f'±â»ç ¿ä¾à: {reply}'
+    return f'ê¸°ì‚¬ ìš”ì•½: {reply}'
